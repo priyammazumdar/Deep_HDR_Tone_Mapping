@@ -239,9 +239,3 @@ class VisionTransformer(nn.Module):
         x = self.match_channels(x)
 
         return x
-
-if __name__ == "__main__":
-    rand = torch.rand(size=(10,3,512,512))
-    vit = VisionTransformer()
-    out = vit(rand)
-    print(out.shape)
